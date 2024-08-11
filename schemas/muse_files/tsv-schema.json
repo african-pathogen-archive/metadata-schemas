@@ -1,6 +1,6 @@
 [
   {
-    "name": "study_id",
+    "name": "study_ID",
     "valueType": "string",
     "requireNotEmpty": true
   },
@@ -32,7 +32,12 @@
     "valueType": "string"
   },
   {
-    "name": "geo loc country",
+    "name": "geo_loc name (country)",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "geo_loc name (state/province/territory)",
     "valueType": "string",
     "requireNotEmpty": true
   },
@@ -79,15 +84,15 @@
     "requireNotEmpty": true
   },
   {
-    "name": "vibrio cholerae rdt test",
+    "name": "vibrio cholerae RDT test",
     "valueType": "string"
   },
   {
-    "name": "vibrio cholerae rdt test date",
+    "name": "vibrio cholerae RDT test date",
     "valueType": "string"
   },
   {
-    "name": "vibrio cholerae rdt result",
+    "name": "vibrio cholerae RDT result",
     "valueType": "string"
   },
   {
@@ -109,7 +114,7 @@
     "valueType": "string"
   },
   {
-    "name": "diagnostic pcr ct value 1",
+    "name": "diagnostic pcr Ct value 1",
     "valueType": "number"
   },
   {
@@ -121,11 +126,11 @@
     "valueType": "string"
   },
   {
-    "name": "diagnostic pcr ct value 2",
+    "name": "diagnostic pcr Ct value 2",
     "valueType": "number"
   },
   {
-    "name": "host scientific name",
+    "name": "host (scientific name)",
     "valueType": "string",
     "requireNotEmpty": true
   },
@@ -146,7 +151,7 @@
     "valueType": "string"
   },
   {
-    "name": "host residence geoloc country",
+    "name": "host residence geo_loc name (country)",
     "valueType": "string"
   },
   {
@@ -172,19 +177,19 @@
     "requireNotEmpty": true
   },
   {
-    "name": "location of exposure geoloc country",
+    "name": "location of exposure geo_loc name (country)",
     "valueType": "string"
   },
   {
-    "name": "destination of most recent travel",
+    "name": "destination of most recent travel (city)",
     "valueType": "string"
   },
   {
-    "name": "destination of most recent travel geoloc province",
+    "name": "destination of most recent travel (state/province/territory)",
     "valueType": "string"
   },
   {
-    "name": "destination of most recent travel geoloc country",
+    "name": "destination of most recent travel (country)",
     "valueType": "string"
   },
   {

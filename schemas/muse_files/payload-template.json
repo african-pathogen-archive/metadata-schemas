@@ -27,6 +27,7 @@
             "sample_collector_contact_address": ${sample collector contact address},
             "sample_received_date": ${sample received date},
             "geo_loc_country": ${geo loc country},
+            "geo_loc_province": ${geo loc province},
             "organism": ${organism},
             "isolate": ${isolate},
             "purpose_of_sampling": ${purpose of sampling},
@@ -65,7 +66,7 @@
             "most_recent_travel_departure_date": ${most recent travel departure date},
             "most_recent_travel_return_date": ${most recent travel return date},
             "travel_history": ${travel history},
-            "authors": ${authors},
-        },
+            "authors": ${authors}
+        }
   }
   
