@@ -1,0 +1,71 @@
+{
+    "analysisType": {
+      "name": "cholgen_sequence"
+    },
+      "studyId": ${study_id},
+        "samples": [
+          {
+            "submitterSampleId": ${specimen collector sample ID},
+            "matchedNormalSubmitterSampleId": null,
+            "sampleType": "Total RNA",
+            "specimen": {
+              "submitterSpecimenId": ${specimen collector sample ID},
+              "tumourNormalDesignation": "Normal",
+              "specimenTissueSource": "Other",
+              "specimenType": "Normal"
+            },
+           "donor": {
+             "submitterDonorId": ${specimen collector sample ID},
+             "gender": "Other"
+           }
+          }
+        ],
+        "sample_collection": {
+            "sample_collected_by": ${sample collected by},
+            "sample_collection_date": ${sample collection date},
+            "sample_collector_email_address": ${sample collector email address},
+            "sample_collector_contact_address": ${sample collector contact address},
+            "sample_received_date": ${sample received date},
+            "geo_loc_country": ${geo loc country},
+            "organism": ${organism},
+            "isolate": ${isolate},
+            "purpose_of_sampling": ${purpose of sampling},
+            "purpose_of_sampling_details": ${purpose of sampling details},
+            "anatomical_material": ${anatomical material},
+            "specimen_type": ${specimen type},
+            "vibrio_cholerae_culture_method": ${vibrio cholerae culture method},
+            "vibrio_cholerae_culture_date": ${vibrio cholerae culture date},
+            "vibrio_cholerae_culture_result": ${vibrio cholerae culture result},
+            "vibrio_cholerae_rdt_test": ${vibrio cholerae rdt test},
+            "vibrio_cholerae_rdt_test_date": ${vibrio cholerae rdt test date},
+            "vibrio_cholerae_rdt_result": ${vibrio cholerae rdt result},
+            "serogroup": ${serogroup},
+            "serotype": ${serotype},
+            "gene_name_1": ${gene name 1},
+            "diagnostic_pcr_protocol_1": ${diagnostic pcr protocol 1},
+            "diagnostic_pcr_ct_value_1": ${diagnostic pcr ct value 1},
+            "gene_name_2": ${gene name 2},
+            "diagnostic_pcr_protocol_2": ${diagnostic pcr protocol 2},
+            "diagnostic_pcr_ct_value_2": ${diagnostic pcr ct value 2},
+            "host_scientific_name": ${host scientific name},
+            "host_health_state": ${host health state},
+            "host_age": ${host age},
+            "host_age_unit": ${host age unit},
+            "host_gender": ${host gender},
+            "host_residence_geoloc_country": ${host residence geoloc country},
+            "symptom_onset_date": ${symptom onset date},
+            "signs_and_symptoms": ${signs and symptoms},
+            "dehydration_status": ${dehydration status},
+            "host_vaccination_status": ${host vaccination status},
+            "vaccine_name": ${vaccine name},
+            "location_of_exposure_geoloc_country": ${location of exposure geoloc country},
+            "destination_of_most_recent_travel": ${destination of most recent travel},
+            "destination_of_most_recent_travel_geoloc_province": ${destination of most recent travel geoloc province},
+            "destination_of_most_recent_travel_geoloc_country": ${destination of most recent travel geoloc country},
+            "most_recent_travel_departure_date": ${most recent travel departure date},
+            "most_recent_travel_return_date": ${most recent travel return date},
+            "travel_history": ${travel history},
+            "authors": ${authors},
+        },
+  }
+  

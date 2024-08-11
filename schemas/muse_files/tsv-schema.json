@@ -1,0 +1,206 @@
+[
+  {
+    "name": "study_id",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "specimen collector sample ID",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "sample collected by",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "sample collection date",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "sample collector email address",
+    "valueType": "string"
+  },
+  {
+    "name": "sample collector contact address",
+    "valueType": "string"
+  },
+  {
+    "name": "sample received date",
+    "valueType": "string"
+  },
+  {
+    "name": "geo loc country",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "organism",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "isolate",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "purpose of sampling",
+    "valueType": "string"
+  },
+  {
+    "name": "purpose of sampling details",
+    "valueType": "string"
+  },
+  {
+    "name": "anatomical material",
+    "valueType": "string"
+  },
+  {
+    "name": "specimen type",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "vibrio cholerae culture method",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "vibrio cholerae culture date",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "vibrio cholerae culture result",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "vibrio cholerae rdt test",
+    "valueType": "string"
+  },
+  {
+    "name": "vibrio cholerae rdt test date",
+    "valueType": "string"
+  },
+  {
+    "name": "vibrio cholerae rdt result",
+    "valueType": "string"
+  },
+  {
+    "name": "serogroup",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "serotype",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "gene name 1",
+    "valueType": "string"
+  },
+  {
+    "name": "diagnostic pcr protocol 1",
+    "valueType": "string"
+  },
+  {
+    "name": "diagnostic pcr ct value 1",
+    "valueType": "number"
+  },
+  {
+    "name": "gene name 2",
+    "valueType": "string"
+  },
+  {
+    "name": "diagnostic pcr protocol 2",
+    "valueType": "string"
+  },
+  {
+    "name": "diagnostic pcr ct value 2",
+    "valueType": "number"
+  },
+  {
+    "name": "host scientific name",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "host health state",
+    "valueType": "string"
+  },
+  {
+    "name": "host age",
+    "valueType": "number"
+  },
+  {
+    "name": "host age unit",
+    "valueType": "string"
+  },
+  {
+    "name": "host gender",
+    "valueType": "string"
+  },
+  {
+    "name": "host residence geoloc country",
+    "valueType": "string"
+  },
+  {
+    "name": "symptom onset date",
+    "valueType": "string"
+  },
+  {
+    "name": "signs and symptoms",
+    "valueType": "string"
+  },
+  {
+    "name": "dehydration status",
+    "valueType": "string"
+  },
+  {
+    "name": "host vaccination status",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "vaccine name",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
+    "name": "location of exposure geoloc country",
+    "valueType": "string"
+  },
+  {
+    "name": "destination of most recent travel",
+    "valueType": "string"
+  },
+  {
+    "name": "destination of most recent travel geoloc province",
+    "valueType": "string"
+  },
+  {
+    "name": "destination of most recent travel geoloc country",
+    "valueType": "string"
+  },
+  {
+    "name": "most recent travel departure date",
+    "valueType": "string"
+  },
+  {
+    "name": "most recent travel return date",
+    "valueType": "string"
+  },
+  {
+    "name": "travel history",
+    "valueType": "string"
+  },
+  {
+    "name": "authors",
+    "valueType": "string"
+  }
+]
