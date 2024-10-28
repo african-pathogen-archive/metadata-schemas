@@ -62,6 +62,12 @@
                         "Zimbabwe"
                     ]
                 },
+                "optional_country": {
+                    "anyOf": [
+                        {"$ref": "#/definitions/geospatial/country"},
+                        {"type": "null"}
+                    ]
+                },
                 "angola_province": {
                     "type": "string",
                     "enum": [
@@ -1261,8 +1267,15 @@
                         "format": "date"
                     },
                     "sample_collector_email_address": {
-                        "type": "string",
-                        "format": "email"
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "email"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ]
                     },
                     "sample_collector_contact_address": {
                         "type": "string"
@@ -1417,9 +1430,15 @@
                         "type": "string"
                      },
                      "diagnostic_pcr_ct_value_1": {
-                        "type": "number",
-                        "minimum": 0,
-                        "maximum": 40
+                        "anyOf": [
+                            {
+                              "type": "number",
+                              "minimum": 0
+                            },
+                            {
+                              "type": "null"
+                            }
+                        ]
                      },
                      "gene_name_2": {
                         "type": "string"
@@ -1428,9 +1447,15 @@
                         "type": "string"
                      },
                      "diagnostic_pcr_ct_value_2": {
-                        "type": "number",
-                        "minimum": 0,
-                        "maximum": 40
+                        "anyOf": [
+                            {
+                              "type": "number",
+                              "minimum": 0
+                            },
+                            {
+                              "type": "null"
+                            }
+                        ]
                      },
                      "host_scientific_name": {
                         "type": "string",
@@ -1506,7 +1531,7 @@
                         ]
                     },
                     "host_residence_geoloc_country": {
-                        "$ref": "#/definitions/geospatial/country"
+                        "$ref": "#/definitions/geospatial/optional_country"
                     },
                     "symptom_onset_date": {
                         "type": "string",
@@ -1639,7 +1664,7 @@
                         "type": "string"
                     },
                     "location_of_exposure_geoloc_country": {
-                        "$ref": "#/definitions/geospatial/country"
+                        "$ref": "#/definitions/geospatial/optional_country"
                     },
                     "destination_of_most_recent_travel": {
                         "type": "string"
@@ -1648,7 +1673,7 @@
                         "type": "string"
                     },
                     "destination_of_most_recent_travel_geoloc_country": {
-                        "$ref": "#/definitions/geospatial/country"
+                        "$ref": "#/definitions/geospatial/optional_country"
                     },
                     "most_recent_travel_departure_date": {
                         "type": "string",
@@ -1664,858 +1689,858 @@
                     "authors": {
                         "type": "string"
                     }
-                }
-            }
-        },
-        "allOf": [
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Angola"
-                        }
-                    }
                 },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/angola_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Benin"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/benin_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Botswana"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/botswana_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Burkina Faso"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/burkina_faso_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Burundi"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/burundi_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Cameroon"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/cameroon_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Cape verde"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/cape_verde_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Central African Republic"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/central_african_republic_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Chad"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/chad_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Camoros"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/camoros_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Democratic Republic of Congo"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/democratic_republic_of_congo_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Republic of the Congo"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/republic_of_the_congo_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Ivory Coast"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/ivory_coast_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Djibouti"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/djibouti_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Egypt"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/egypt_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Equatorial Guinea"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/equatorial_guinea_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Eritrea"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/eritrea_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Eswatini"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/eswatini_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Ethiopia"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/ethiopia_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Gabon"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/gabon_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Gambia"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/gambia_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Ghana"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/ghana_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Guinea"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/guinea_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Guinea Bissau"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/guinea_bissau_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Kenya"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/kenya_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Lesotho"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/lesotho_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Liberia"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/liberia_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Libya"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/libya_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Madagascar"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/madagascar_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Malawi"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/malawi_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Mali"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/mali_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Mauritania"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/mauritania_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Mauritius"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/mauritius_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Morocco"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/morocco_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Mozambique"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/mozambique_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Namibia"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/namibia_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Niger"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/niger_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Nigeria"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/nigeria_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Rwanda"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/rwanda_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Sao Tome"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/sao_tome_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Senegal"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/senegal_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Seychelles"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/seychelles_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Sierra Leone"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/sierra_leone_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Somalia"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/somalia_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "South Africa"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/south_africa_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "South Sudan"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/south_sudan_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Sudan"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/sudan_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Tanzania"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/tanzania_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Togo"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/togo_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Tunisia"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/tunisia_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Uganda"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/uganda_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Zambia"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/zambia_province"
-                        }
-                    }
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "geo_loc_country": {
-                            "const": "Zimbabwe"
-                        }
-                    }
-                },
-                "then": {
-                    "properties": {
-                        "geo_loc_province": {
-                            "$ref": "#/definitions/geospatial/zimbabwe_province"
-                        }
-                    }
-                }
-            }
-        ]
+                "allOf": [
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Angola"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/angola_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Benin"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/benin_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Botswana"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/botswana_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Burkina Faso"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/burkina_faso_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Burundi"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/burundi_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Cameroon"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/cameroon_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Cape verde"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/cape_verde_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Central African Republic"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/central_african_republic_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Chad"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/chad_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Camoros"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/camoros_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Democratic Republic of Congo"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/democratic_republic_of_congo_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Republic of the Congo"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/republic_of_the_congo_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Ivory Coast"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/ivory_coast_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Djibouti"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/djibouti_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Egypt"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/egypt_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Equatorial Guinea"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/equatorial_guinea_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Eritrea"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/eritrea_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Eswatini"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/eswatini_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Ethiopia"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/ethiopia_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Gabon"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/gabon_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Gambia"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/gambia_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Ghana"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/ghana_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Guinea"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/guinea_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Guinea Bissau"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/guinea_bissau_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Kenya"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/kenya_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Lesotho"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/lesotho_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Liberia"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/liberia_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Libya"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/libya_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Madagascar"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/madagascar_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Malawi"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/malawi_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Mali"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/mali_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Mauritania"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/mauritania_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Mauritius"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/mauritius_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Morocco"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/morocco_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Mozambique"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/mozambique_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Namibia"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/namibia_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Niger"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/niger_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Nigeria"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/nigeria_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Rwanda"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/rwanda_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Sao Tome"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/sao_tome_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Senegal"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/senegal_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Seychelles"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/seychelles_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Sierra Leone"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/sierra_leone_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Somalia"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/somalia_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "South Africa"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/south_africa_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "South Sudan"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/south_sudan_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Sudan"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/sudan_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Tanzania"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/tanzania_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Togo"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/togo_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Tunisia"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/tunisia_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Uganda"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/uganda_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Zambia"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/zambia_province"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "geo_loc_country": {
+                                    "const": "Zimbabwe"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "geo_loc_province": {
+                                    "$ref": "#/definitions/geospatial/zimbabwe_province"
+                                }
+                            }
+                        }
+                    }
+                ]                
+            }   
+        }
     }
 }

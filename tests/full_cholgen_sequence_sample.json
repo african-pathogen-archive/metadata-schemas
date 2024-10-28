@@ -1,0 +1,80 @@
+{
+    "analysisType": {
+      "name": "cholgen_sequence"
+    },
+      "studyId": "NICD-01",
+        "samples": [
+          {
+            "submitterSampleId": "CP043554",
+            "matchedNormalSubmitterSampleId": null,
+            "sampleType": "Total RNA",
+            "specimen": {
+              "submitterSpecimenId": "CP043554",
+              "tumourNormalDesignation": "Normal",
+              "specimenTissueSource": "Other",
+              "specimenType": "Normal"
+            },
+           "donor": {
+             "submitterDonorId": "CP043554",
+             "gender": "Other"
+           }
+          }
+        ],
+        "sample_collection": {
+            "sample_collected_by": "NICD",
+            "sample_collection_date": "2024-03-13",
+            "sample_collector_email_address": "abc@one",
+            "sample_collector_contact_address": "",
+            "sample_received_date": "2024-03-15",
+            "geo_loc_country": "Cameroon",
+            "geo_loc_province": "",
+            "organism": "Vibrionaceae [NCBITaxon:641]",
+            "isolate": "CP043554",
+            "purpose_of_sampling": "Diagnostic Testing [GENEPIO:0100002]",
+            "purpose_of_sampling_details": "",
+            "anatomical_material": "Rectal swab",
+            "specimen_type": "Bacterial isolate",
+            "vibrio_cholerae_culture_method": "TCBS agar",
+            "vibrio_cholerae_culture_date": "2024-05-07",
+            "vibrio_cholerae_culture_result": "Positive",
+            "vibrio_cholerae_rdt_test": "Positive",
+            "vibrio_cholerae_rdt_test_date": "2024-05-08",
+            "vibrio_cholerae_rdt_result": "Indeterminate",
+            "serogroup": "VC O139",
+            "serotype": "Inaba",
+            "gene_name_1": "",
+            "diagnostic_pcr_protocol_1": "",
+            "diagnostic_pcr_ct_value_1": null,
+            "gene_name_2": "",
+            "diagnostic_pcr_protocol_2": "",
+            "diagnostic_pcr_ct_value_2": null,
+            "host_scientific_name": "Homo sapiens [NCBITaxon:9606]",
+            "host_health_state": "Deceased [NCIT:C28554]",
+            "host_age": 25,
+            "host_age_unit": "months [UO:0000035]",
+            "host_gender": "Female [NCIT:C46110]",
+            "host_residence_geoloc_country": null,
+            "symptom_onset_date": "2024-01-30",
+            "signs_and_symptoms": "Abnormal lung auscultation [HP:0030829]",
+            "dehydration_status": "Normal",
+            "host_vaccination_status": "Partially Vaccinated [GENEPIO:0100101]",
+            "vaccine_name": "Dukoral",
+            "location_of_exposure_geoloc_country": null,
+            "destination_of_most_recent_travel": "",
+            "destination_of_most_recent_travel_geoloc_province": "",
+            "destination_of_most_recent_travel_geoloc_country": "Angola",
+            "most_recent_travel_departure_date": "2024-01-30",
+            "most_recent_travel_return_date": "2024-01-11",
+            "travel_history": "",
+            "authors": ""
+        },
+        "files": [{
+          "dataType": "fasta",
+          "fileName": "file1.fasta",
+          "fileSize": 1000,
+          "fileAccess": "open",
+          "fileType": "fasta",
+          "fileMd5sum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }]
+  }              
+              

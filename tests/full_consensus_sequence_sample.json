@@ -1,0 +1,88 @@
+{
+    "analysisType": {
+      "name": "consensus_sequence"
+    },
+      "studyId": "IPD1",
+        "samples": [
+          {
+            "submitterSampleId": "IPD_0592",
+            "matchedNormalSubmitterSampleId": null,
+            "sampleType": "Total RNA",
+            "specimen": {
+              "submitterSpecimenId": "IPD_0592",
+              "tumourNormalDesignation": "Normal",
+              "specimenTissueSource": "Other",
+              "specimenType": "Normal"
+            },
+           "donor": {
+             "submitterDonorId": "IPD_0592",
+             "gender": "Other"
+           }
+          }
+        ],
+        "sample_collection": {
+          "sample_collected_by": "Institut Pasteur de Dakar",
+          "sequence_submitted_by": "Institut Pasteur de Dakar",
+          "sample_collection_date": "2020-11-27",
+          "sample_collection_date_null_reason": null,
+          "geo_loc_country": "Senegal",
+          "geo_loc_province": "Dakar",
+          "organism": "Severe acute respiratory syndrome coronavirus 2",
+          "isolate": "SARS-CoV-2/human/Senegal/IPD_0592/2021",
+          "fasta_header_name": "SARS-CoV-2/human/Senegal/IPD_0592/2021",
+          "purpose_of_sampling": "Cluster/Outbreak investigation",
+          "purpose_of_sampling_details": "Not Provided",
+          "anatomical_material": "Not Provided",
+          "anatomical_part": ["Not Provided"],
+          "body_product": "Not Provided",
+          "environmental_material": "Not Provided",
+          "environmental_site": "Not Provided",
+          "collection_device": "Not Provided",
+          "collection_method": "Not Provided"
+        },
+        "host": {
+          "host_scientific_name": "Homo sapiens",
+          "host_disease": "Not Provided",
+          "host_age": 49,
+          "host_age_null_reason": null,
+          "host_age_unit": "year",
+          "host_age_bin": "40 - 49",
+          "host_gender": "Male"
+        },
+        "experiment": {
+          "purpose_of_sequencing": ["Cluster/Outbreak investigation"],
+          "purpose_of_sequencing_details": "Not Provided",
+          "sequencing_instrument": "Oxford Nanopore",
+          "sequencing_protocol": ""
+        },
+        "sequence_analysis": {
+          "raw_sequence_data_processing_method": "",
+          "dehosting_method": "",
+          "consensus_sequence_software_name": "ARTIC-nanopolish",
+          "consensus_sequence_software_version": "1.1.3",
+          "metrics": {
+            "breadth_of_coverage": "Not Provided",
+            "depth_of_coverage": "400.6X"
+          },
+          "reference_genome_accession": "",
+          "bioinformatics_protocol": ""
+        },
+        "pathogen_diagnostic_testing": {
+          "gene_name": "Not Provided",
+          "diagnostic_pcr_ct_value": null,
+          "diagnostic_pcr_ct_value_null_reason": "Not Provided"
+        },
+        "database_identifiers": {
+          "gisaid_accession": ""
+        },
+        "files": [
+          {
+              "fileName": "fakeName.fasta",
+              "dataType": "FASTA",
+              "fileType": "FASTA",
+              "fileSize": 1000,
+              "fileAccess": "open",
+              "fileMd5sum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+      ]
+  }

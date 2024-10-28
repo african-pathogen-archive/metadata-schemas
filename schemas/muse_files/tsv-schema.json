@@ -5,6 +5,11 @@
     "requireNotEmpty": true
   },
   {
+    "name": "fasta header name",
+    "valueType": "string",
+    "requireNotEmpty": true
+  },
+  {
     "name": "specimen collector sample ID",
     "valueType": "string",
     "requireNotEmpty": true
