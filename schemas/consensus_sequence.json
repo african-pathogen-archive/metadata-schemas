@@ -2,1241 +2,8 @@
   "name": "consensus_sequence",
   "schema": {
     "type": "object",
-    "definitions": {
-      "geospatial": {
-        "country": {
-            "type": "string",
-            "enum": [
-                "Angola",
-                "Benin",
-                "Botswana",
-                "Burkina Faso",
-                "Burundi",
-                "Cameroon",
-                "Cape verde",
-                "Central African Republic",
-                "Chad",
-                "Camoros",
-                "Democratic Republic of Congo",
-                "Republic of the Congo",
-                "Ivory Coast",
-                "Djibouti",
-                "Egypt",
-                "Equatorial Guinea",
-                "Eritrea",
-                "Eswatini",
-                "Ethiopia",
-                "Gabon",
-                "Gambia",
-                "Ghana",
-                "Guinea",
-                "Guinea Bissau",
-                "Kenya",
-                "Lesotho",
-                "Liberia",
-                "Libya",
-                "Madagascar",
-                "Malawi",
-                "Mali",
-                "Mauritania",
-                "Mauritius",
-                "Morocco",
-                "Mozambique",
-                "Namibia",
-                "Niger",
-                "Nigeria",
-                "Rwanda",
-                "Sao Tome",
-                "Senegal",
-                "Seychelles",
-                "Sierra Leone",
-                "Somalia",
-                "South Africa",
-                "South Sudan",
-                "Sudan",
-                "Tanzania",
-                "Togo",
-                "Tunisia",
-                "Uganda",
-                "Zambia",
-                "Zimbabwe"
-            ]
-        },
-        "optional_country": {
-            "anyOf": [
-                {"$ref": "#/definitions/geospatial/country"},
-                {"type": "null"}
-            ]
-        },
-        "angola_province": {
-            "type": "string",
-            "enum": [
-                "Bengo",
-                "Benguela",
-                "Bié",
-                "Cabinda",
-                "Cuando Cubango",
-                "Cuanza Norte",
-                "Cuanza Sul",
-                "Cunene",
-                "Huambo",
-                "Huíla",
-                "Luanda ",
-                "Lunda Norte",
-                "Lunda Sul",
-                "Malanje",
-                "Moxico",
-                "Namibe",
-                "Uíge",
-                "Zaire"
-            ]
-        },
-        "benin_province": {
-            "type": "string",
-            "enum": [
-                "Benin",
-                "Alibori",
-                "Atakora",
-                "Atlantique",
-                "Borgou",
-                "Collines",
-                "Donga",
-                "Kouffo",
-                "Littoral",
-                "Mono",
-                "Ouémé",
-                "Plateau",
-                "Zou"
-            ]
-        },
-        "botswana_province": {
-            "type": "string",
-            "enum": [
-                "Central District",
-                "Chobe District",
-                "Francistown District",
-                "Gaborone District",
-                "Ghanzi District",
-                "Jwaneng District",
-                "Kgalagadi District",
-                "Kgatleng District",
-                "Kweneng District",
-                "Lobatse District",
-                "North-East District",
-                "North-West District",
-                "Selibe Phikwe District",
-                "South-East District",
-                "Southern District",
-                "Sowa Town"
-            ]
-        },
-        "burkina_faso_province": {
-            "type": "string",
-            "enum": [
-                "Boucle du Mouhoun",
-                "Cascades",
-                "Centre",
-                "Centre Est",
-                "Centre Nord",
-                "Centre Ouest",
-                "Centre Sud",
-                "Est",
-                "Hauts Bassins",
-                "Nord",
-                "Plateau Central",
-                "Sahel",
-                "Sud Ouest"
-            ]
-        },
-        "burundi_province": {
-            "type": "string",
-            "enum": [
-                "Bubanza",
-                "Bujumbura Mairie (Bujumbura City)",
-                "Bujumbura Rural",
-                "Bururi",
-                "Cankuzo",
-                "Cibitoke",
-                "Gitega",
-                "Karuzi",
-                "Kayanza",
-                "Kirundo",
-                "Makamba",
-                "Muramvya",
-                "Muyinga",
-                "Mwaro",
-                "Ngozi",
-                "Rumonge",
-                "Rutana",
-                "Ruyigi"
-            ]
-        },
-        "cameroon_province": {
-            "type": "string",
-            "enum": [
-                "Adamawa",
-                "Centre",
-                "East",
-                "Far North",
-                "Littoral",
-                "North",
-                "Northwest",
-                "South",
-                "Southwest",
-                "West"
-            ]
-        },
-        "cape_verde_province": {
-            "type": "string",
-            "enum": [
-                "Boa Vista",
-                "Brava",
-                "Maio",
-                "Mosteiros",
-                "Paul",
-                "Porto Novo",
-                "Praia",
-                "Ribeira Brava",
-                "Ribeira Grande",
-                "Ribeira Grande de Santiago",
-                "Sal",
-                "Santa Catarina",
-                "Santa Catarina do Fogo",
-                "Santa Cruz",
-                "São Domingos",
-                "São Filipe",
-                "São Lourenço dos Órgãos",
-                "São Miguel",
-                "São Salvador do Mundo",
-                "São Vicente",
-                "Tarrafal",
-                "Tarrafal de São Nicolau"
-            ]
-        },
-        "central_african_republic_province": {
-            "type": "string",
-            "enum": [
-                "Bamingui-Bangoran",
-                "Bangui (Capital District)",
-                "Basse-Kotto",
-                "Haute-Kotto",
-                "Haut-Mbomou",
-                "Kémo",
-                "Lobaye",
-                "Mambéré-Kadéï",
-                "Mbomou",
-                "Nana-Grébizi",
-                "Nana-Mambéré",
-                "Ombella-M'Poko",
-                "Ouaka",
-                "Ouham",
-                "Ouham-Pendé",
-                "Vakaga"
-            ]
-        },
-        "chad_province": {
-            "type": "string",
-            "enum": [
-                "Barh El Gazel",
-                "Batha",
-                "Borkou",
-                "Chari-Baguirmi",
-                "Ennedi Est",
-                "Ennedi Ouest",
-                "Guéra",
-                "Hadjer-Lamis",
-                "Kanem",
-                "Lac",
-                "Logone Occidental",
-                "Logone Oriental",
-                "Mandoul",
-                "Mayo-Kebbi Est",
-                "Mayo-Kebbi Ouest",
-                "Moyen-Chari",
-                "N'Djamena (Capital Region)",
-                "Ouaddaï",
-                "Salamat",
-                "Sila",
-                "Tandjilé",
-                "Tibesti",
-                "Wadi Fira"
-            ]
-        },
-        "camoros_province": {
-            "type": "string",
-            "enum": [
-                "Grande Comore (also known as Ngazidja)",
-                "Anjouan (also known as Ndzuwani)",
-                "Mohéli (also known as Mwali)"
-            ]
-        },
-        "democratic_republic_of_congo_province": {
-            "type": "string",
-            "enum": [
-                "Bas-Uélé",
-                "Équateur",
-                "Haut-Katanga",
-                "Haut-Lomami",
-                "Haut-Uélé",
-                "Ituri",
-                "Kasaï",
-                "Kasaï-Central",
-                "Kasaï-Oriental",
-                "Kinshasa (Capital city, also a province)",
-                "Kongo-Central",
-                "Kwango",
-                "Kwilu",
-                "Lomami",
-                "Lualaba",
-                "Mai-Ndombe",
-                "Maniema",
-                "Mongala",
-                "Nord-Ubangi",
-                "Nord-Kivu",
-                "Sankuru",
-                "Sud-Ubangi",
-                "Sud-Kivu",
-                "Tanganyika",
-                "Tshopo",
-                "Tshuapa"
-            ]
-        },
-        "republic_of_the_congo_province": {
-            "type": "string",
-            "enum": [
-                "Bouenza",
-                "Brazzaville (Capital District)",
-                "Cuvette",
-                "Cuvette-Ouest",
-                "Kouilou",
-                "Lékoumou",
-                "Likouala",
-                "Niari",
-                "Plateaux",
-                "Pointe-Noire",
-                "Pool",
-                "Sangha"
-            ]
-        },
-        "ivory_coast_province": {
-            "type": "string",
-            "enum": [
-                "Abidjan",
-                "Bas-Sassandra",
-                "Comoé",
-                "Denguélé",
-                "Gôh",
-                "Lacs",
-                "Lagunes",
-                "Montagnes",
-                "Sassandra-Marahoué",
-                "Savanes",
-                "Vallée du Bandama",
-                "Worodougou",
-                "Yamoussoukro (Autonomous District)",
-                "Zanzan"
-            ]
-        },
-        "djibouti_province": {
-            "type": "string",
-            "enum": [
-                "Ali Sabieh",
-                "Arta",
-                "Dikhil",
-                "Djibouti City (Capital District)",
-                "Obock",
-                "Tadjourah"
-            ]
-        },
-        "egypt_province": {
-            "type": "string",
-            "enum": [
-                "Alexandria",
-                "Aswan",
-                "Asyut",
-                "Beheira",
-                "Beni Suef",
-                "Cairo",
-                "Dakahlia",
-                "Damietta",
-                "Faiyum",
-                "Gharbia",
-                "Giza",
-                "Ismailia",
-                "Kafr El Sheikh",
-                "Luxor",
-                "Matrouh",
-                "Minya",
-                "Monufia",
-                "New Valley",
-                "North Sinai",
-                "Port Said",
-                "Qalyubia",
-                "Qena",
-                "Red Sea",
-                "Sharqia",
-                "Sohag",
-                "South Sinai",
-                "Suez"
-            ]
-        },
-        "equatorial_guinea_province": {
-            "type": "string",
-            "enum": [
-                "Annobón",
-                "Bioko Norte",
-                "Bioko Sur",
-                "Centro Sur",
-                "Kié-Ntem",
-                "Litoral",
-                "Wele-Nzas",
-                "Djibloho"
-            ]
-        },
-        "eritrea_province": {
-            "type": "string",
-            "enum": [
-                "Anseba",
-                "Debub (South)",
-                "Debubawi Keyih Bahri (Southern Red Sea)",
-                "Gash-Barka",
-                "Maekel (Central)",
-                "Semenawi Keyih Bahri (Northern Red Sea)"
-            ]
-        },
-        "eswatini_province": {
-            "type": "string",
-            "enum": [
-                "Hhohho",
-                "Lubombo",
-                "Manzini",
-                "Shiselweni"
-            ]
-        },
-        "ethiopia_province": {
-            "type": "string",
-            "enum": [
-                "Afar",
-                "Amhara",
-                "Benishangul-Gumuz",
-                "Dire Dawa (Chartered City)",
-                "Gambela",
-                "Harari",
-                "Oromia",
-                "Somali",
-                "Southern Nations, Nationalities, and Peoples' Region (SNNPR)",
-                "Tigray",
-                "Addis Ababa (Chartered City)",
-                "Sidama (Newly created region as of November 2020)"
-            ]
-        },
-        "gabon_province": {
-            "type": "string",
-            "enum": [
-                "Estuaire",
-                "Haut-Ogooué",
-                "Moyen-Ogooué",
-                "Ngounié",
-                "Nyanga",
-                "Ogooué-Ivindo",
-                "Ogooué-Lolo",
-                "Ogooué-Maritime",
-                "Woleu-Ntem"
-            ]
-        },
-        "gambia_province": {
-            "type": "string",
-            "enum": [
-                "Banjul (City)",
-                "Central River",
-                "Lower River",
-                "North Bank",
-                "Upper River"
-            ]
-        },
-        "ghana_province": {
-            "type": "string",
-            "enum": [
-                "Ashanti",
-                "Bono",
-                "Bono East",
-                "Central",
-                "Eastern",
-                "Greater Accra",
-                "North East",
-                "Northern",
-                "Oti",
-                "Savannah",
-                "Upper East",
-                "Upper West",
-                "Volta",
-                "Western",
-                "Western North",
-                "Ahafo"
-            ]
-        },
-        "guinea_province": {
-            "type": "string",
-            "enum": [
-                "Boké",
-                "Conakry (Special Zone)",
-                "Faranah",
-                "Kankan",
-                "Kindia",
-                "Labé",
-                "Mamou",
-                "Nzérékoré"
-            ]
-        },
-        "guinea_bissau_province": {
-            "type": "string",
-            "enum": [
-                "Bafatá",
-                "Biombo",
-                "Bissau Autonomous Region (also known as Bissau)",
-                "Bolama",
-                "Cacheu",
-                "Gabú",
-                "Oio",
-                "Quinara",
-                "Tombali"
-            ]
-        },
-        "kenya_province": {
-            "type": "string",
-            "enum": [
-                "Baringo",
-                "Bomet",
-                "Bungoma",
-                "Busia",
-                "Elgeyo-Marakwet",
-                "Embu",
-                "Garissa",
-                "Homa Bay",
-                "Isiolo",
-                "Kajiado",
-                "Kakamega",
-                "Kericho",
-                "Kiambu",
-                "Kilifi",
-                "Kirinyaga",
-                "Kisii",
-                "Kisumu",
-                "Kitui",
-                "Kwale",
-                "Laikipia",
-                "Lamu",
-                "Machakos",
-                "Makueni",
-                "Mandera",
-                "Marsabit",
-                "Meru",
-                "Migori",
-                "Mombasa",
-                "Murang'a",
-                "Nairobi City",
-                "Nakuru",
-                "Nandi",
-                "Narok",
-                "Nyamira",
-                "Nyandarua",
-                "Nyeri",
-                "Samburu",
-                "Siaya",
-                "Taita-Taveta",
-                "Tana River",
-                "Tharaka-Nithi",
-                "Trans-Nzoia",
-                "Turkana",
-                "Uasin Gishu",
-                "Vihiga",
-                "Wajir",
-                "West Pokot"
-            ]
-        },
-        "lesotho_province": {
-            "type": "string",
-            "enum": [
-                "Berea",
-                "Butha-Buthe",
-                "Leribe",
-                "Mafeteng",
-                "Maseru",
-                "Mohale's Hoek",
-                "Mokhotlong",
-                "Qacha's Nek",
-                "Quthing",
-                "Thaba-Tseka"
-            ]
-        },
-        "liberia_province": {
-            "type": "string",
-            "enum": [
-                "Bomi",
-                "Bong",
-                "Gbarpolu",
-                "Grand Bassa",
-                "Grand Cape Mount",
-                "Grand Gedeh",
-                "Grand Kru",
-                "Lofa",
-                "Margibi",
-                "Maryland",
-                "Montserrado (Capital County)",
-                "Nimba",
-                "River Cess",
-                "River Gee",
-                "Sinoe"
-            ]
-        },
-        "libya_province": {
-            "type": "string",
-            "enum": [
-                "Al Wahat",
-                "Benghazi",
-                "Butnan",
-                "Derna",
-                "Ghat",
-                "Jabal al Akhdar",
-                "Jabal al Gharbi",
-                "Jafara",
-                "Jufra",
-                "Kufra",
-                "Marj",
-                "Misrata",
-                "Murqub",
-                "Murzuq",
-                "Nalut",
-                "Sabha",
-                "Sirt",
-                "Tripoli",
-                "Wadi al Hayaa",
-                "Wadi al Shatii",
-                "Wadi al Juf",
-                "Zawiya"
-            ]
-        },
-        "madagascar_province": {
-            "type": "string",
-            "enum": [
-                "Alaotra-Mangoro",
-                "Amoron'i Mania",
-                "Analamanga",
-                "Analanjirofo",
-                "Androy",
-                "Anosy",
-                "Atsinanana",
-                "Atsimo-Andrefana",
-                "Atsimo-Atsinanana",
-                "Atsimo-Beta",
-                "Atsimo-Atsinanana",
-                "Boeny",
-                "Betsiboka",
-                "Haute Matsiatra",
-                "Ihorombe",
-                "Itasy",
-                "Melaky",
-                "Menabe",
-                "Sava",
-                "Sofia",
-                "Vakinankaratra",
-                "Vatovavy-Fitovinany"
-            ]
-        },
-        "malawi_province": {
-            "type": "string",
-            "enum": [
-                "Balaka",
-                "Blantyre",
-                "Chikwawa",
-                "Chiradzulu",
-                "Chitipa",
-                "Dedza",
-                "Dowa",
-                "Karonga",
-                "Kasungu",
-                "Likoma",
-                "Lilongwe",
-                "Machinga",
-                "Mangochi",
-                "Mchinji",
-                "Mulanje",
-                "Mwanza",
-                "Mzimba",
-                "Neno",
-                "Nkhata Bay",
-                "Nkhotakota",
-                "Nsanje",
-                "Ntcheu",
-                "Ntchisi",
-                "Phalombe",
-                "Rumphi",
-                "Salima",
-                "Thyolo",
-                "Zomba"
-            ]
-        },
-        "mali_province": {
-            "type": "string",
-            "enum": [
-                "Bamako (Capital District)",
-                "Gao",
-                "Kayes",
-                "Kidal",
-                "Koulikoro",
-                "Mopti",
-                "Ségou",
-                "Sikasso",
-                "Taoudénit",
-                "Tombouctou"
-            ]
-        },
-        "mauritania_province": {
-            "type": "string",
-            "enum": [
-                "Adrar",
-                "Assaba",
-                "Brakna",
-                "Dakhlet Nouadhibou",
-                "Gorgol",
-                "Guidimaka",
-                "Hodh Ech Chargui",
-                "Hodh El Gharbi",
-                "Inchiri",
-                "Nouakchott (Capital District)",
-                "Tagant",
-                "Tiris Zemmour",
-                "Trarza"
-            ]
-        },
-        "mauritius_province": {
-            "type": "string",
-            "enum": [
-                "Black River",
-                "Flacq",
-                "Grand Port",
-                "Moka",
-                "Pamplemousses",
-                "Plaines Wilhems",
-                "Port Louis (Capital District)",
-                "Rivière du Rempart",
-                "Savanne",
-                "Rodrigues",
-                "Agalega Islands"
-            ]
-        },
-        "morocco_province": {
-            "type": "string",
-            "enum": [
-                "Tanger-Tetouan-Al Hoceima",
-                "Oriental",
-                "Fès-Meknès",
-                "Rabat-Salé-Kénitra",
-                "Béni Mellal-Khénifra",
-                "Casablanca-Settat",
-                "Marrakech-Safi",
-                "Drâa-Tafilalet",
-                "Souss-Massa",
-                "Guelmim-Oued Noun",
-                "Laâyoune-Sakia El Hamra",
-                "Dakhla-Oued Ed-Dahab"
-            ]
-        },
-        "mozambique_province": {
-            "type": "string",
-            "enum": [
-                "Cabo Delgado",
-                "Gaza",
-                "Inhambane",
-                "Manica",
-                "Maputo (includes the capital city, Maputo)",
-                "Nampula",
-                "Niassa",
-                "Sofala",
-                "Tete",
-                "Zambezia",
-                "",
-                "",
-                "Maputo"
-            ]
-        },
-        "namibia_province": {
-            "type": "string",
-            "enum": [
-                "Zambezi",
-                "Erongo",
-                "Hardap",
-                "Karas",
-                "Kavango East",
-                "Kavango West",
-                "Khomas (includes the capital city, Windhoek)",
-                "Kunene",
-                "Ohangwena",
-                "Omaheke",
-                "Omusati",
-                "Oshana",
-                "Oshikoto",
-                "Otjozondjupa"
-            ]
-        },
-        "niger_province": {
-            "type": "string",
-            "enum": [
-                "Agadez",
-                "Diffa",
-                "Dosso",
-                "Maradi",
-                "Tahoua",
-                "Tillabéri",
-                "Zinder",
-                "Niamey (Capital District)"
-            ]
-        },
-        "nigeria_province": {
-            "type": "string",
-            "enum": [
-                "Abia",
-                "Adamawa",
-                "Akwa Ibom",
-                "Anambra",
-                "Bauchi",
-                "Bayelsa",
-                "Benue",
-                "Borno",
-                "Cross River",
-                "Delta",
-                "Ebonyi",
-                "Edo",
-                "Ekiti",
-                "Enugu",
-                "Gombe",
-                "Imo",
-                "Jigawa",
-                "Kaduna",
-                "Kano",
-                "Katsina",
-                "Kebbi",
-                "Kogi",
-                "Kwara",
-                "Lagos",
-                "Nasarawa",
-                "Niger",
-                "Ogun",
-                "Ondo",
-                "Osun",
-                "Oyo",
-                "Plateau",
-                "Rivers",
-                "Sokoto",
-                "Taraba",
-                "Yobe",
-                "Zamfara",
-                "Abuja"
-            ]
-        },
-        "rwanda_province": {
-            "type": "string",
-            "enum": [
-                "Eastern Province",
-                "Northern Province",
-                "Southern Province",
-                "Western Province",
-                "Kigali City (Capital City)"
-            ]
-        },
-        "sao_tome_province": {
-            "type": "string",
-            "enum": [
-                "São Tomé Province",
-                "Príncipe Province"
-            ]
-        },
-        "senegal_province": {
-            "type": "string",
-            "enum": [
-                "Dakar",
-                "Diourbel",
-                "Fatick",
-                "Kaffrine",
-                "Kaolack",
-                "Kédougou",
-                "Kolda",
-                "Louga",
-                "Matam",
-                "Saint-Louis",
-                "Sedhiou",
-                "Tambacounda",
-                "Thies",
-                "Ziguinchor"
-            ]
-        },
-        "seychelles_province": {
-            "type": "string",
-            "enum": [
-                "Anse aux Pins",
-                "Anse Boileau",
-                "Anse Etoile",
-                "Anse Royale",
-                "Baie Lazare",
-                "Baie Sainte Anne",
-                "Beau Vallon",
-                "Bel Air",
-                "Bel Ombre",
-                "Cascade",
-                "English River",
-                "Glacis",
-                "Grand' Anse (Praslin)",
-                "Grand' Anse Mahe",
-                "Inner Islands",
-                "Les Mamelles",
-                "Mont Buxton",
-                "Mont Fleuri",
-                "Plaisance",
-                "Pointe La Rue",
-                "Port Glaud",
-                "Roche Caiman",
-                "Saint Louis",
-                "Takamaka",
-                "Outer Islands",
-                "Sube (Farquhar Group)"
-            ]
-        },
-        "sierra_leone_province": {
-            "type": "string",
-            "enum": [
-                "Bombali District",
-                "Bonthe District",
-                "Falaba District",
-                "Kailahun District",
-                "Kambia District",
-                "Karene District",
-                "Kenema District",
-                "Koinadugu District",
-                "Kono District",
-                "Moyamba District",
-                "Port Loko District",
-                "Pujehun District",
-                "Tonkolili District",
-                "Western Area Rural District",
-                "Western Area Urban District (includes the capital city, Freetown)",
-                "Bo District"
-            ]
-        },
-        "somalia_province": {
-            "type": "string",
-            "enum": [
-                "Awdal",
-                "Bakool",
-                "Banaadir (includes the capital city, Mogadishu)",
-                "Bari",
-                "Bay",
-                "Galguduud",
-                "Gedo",
-                "Hiraan",
-                "Middle Juba",
-                "Lower Juba",
-                "Middle Shabelle",
-                "Lower Shabelle",
-                "Mudug",
-                "Nugaal",
-                "Sanaag",
-                "Sool",
-                "Togdheer",
-                "Woqooyi Galbeed"
-            ]
-        },
-        "south_africa_province": {
-            "type": "string",
-            "enum": [
-                "Eastern Cape",
-                "Free State",
-                "Gauteng",
-                "KwaZulu-Natal",
-                "Limpopo",
-                "Mpumalanga",
-                "Northern Cape",
-                "North West",
-                "Western Cape"
-            ]
-        },
-        "south_sudan_province": {
-            "type": "string",
-            "enum": [
-                "Central Equatoria",
-                "Eastern Equatoria",
-                "Jonglei",
-                "Lakes",
-                "Northern Bahr el Ghazal",
-                "Unity",
-                "Upper Nile",
-                "Warrap",
-                "Western Bahr el Ghazal",
-                "Western Equatoria"
-            ]
-        },
-        "sudan_province": {
-            "type": "string",
-            "enum": [
-                "South_Sudan",
-                "Al Qadarif",
-                "Blue Nile",
-                "Central Darfur",
-                "East Darfur",
-                "Gedaref",
-                "Kassala",
-                "Khartoum (Capital Territory)",
-                "North Darfur",
-                "North Kordofan",
-                "Northern",
-                "Red Sea",
-                "River Nile",
-                "Sennar",
-                "South Darfur",
-                "South Kordofan",
-                "West Darfur",
-                "West Kordofan",
-                "White Nile"
-            ]
-        },
-        "tanzania_province": {
-            "type": "string",
-            "enum": [
-                "Arusha",
-                "Dar es Salaam (Capital Territory)",
-                "Dodoma (Capital Territory)",
-                "Geita",
-                "Iringa",
-                "Kagera",
-                "Katavi",
-                "Kigoma",
-                "Kilimanjaro",
-                "Lindi",
-                "Manyara",
-                "Mara",
-                "Mbeya",
-                "Morogoro",
-                "Mtwara",
-                "Mwanza",
-                "Njombe",
-                "Pemba North",
-                "Pemba South",
-                "Pwani",
-                "Rukwa",
-                "Ruvuma",
-                "Shinyanga",
-                "Simiyu",
-                "Singida",
-                "Songwe",
-                "Tabora",
-                "Tanga",
-                "Zanzibar Central/South",
-                "Zanzibar North",
-                "Zanzibar Urban/West"
-            ]
-        },
-        "togo_province": {
-            "type": "string",
-            "enum": [
-                "Savanes Region",
-                "Kara Region",
-                "Centrale Region",
-                "Plateaux Region",
-                "Maritime Region"
-            ]
-        },
-        "tunisia_province": {
-            "type": "string",
-            "enum": [
-                "Ariana",
-                "Beja",
-                "Ben Arous",
-                "Bizerte",
-                "Gabes",
-                "Gafsa",
-                "Jendouba",
-                "Kairouan",
-                "Kasserine",
-                "Kebili",
-                "Kef",
-                "Mahdia",
-                "Manouba",
-                "Medenine",
-                "Monastir",
-                "Nabeul",
-                "Sfax",
-                "Sidi Bouzid",
-                "Siliana",
-                "Sousse",
-                "Tataouine",
-                "Tozeur",
-                "Tunis (includes the capital city, Tunis)",
-                "Zaghouan"
-            ]
-        },
-        "uganda_province": {
-            "type": "string",
-            "enum": [
-                "Abim",
-                "Adjumani",
-                "Agago",
-                "Alebtong",
-                "Amolatar",
-                "Amudat",
-                "Amuria",
-                "Amuru",
-                "Apac",
-                "Arua",
-                "Budaka",
-                "Bududa",
-                "Bugiri",
-                "Buhweju",
-                "Buikwe",
-                "Bukedea",
-                "Bukomansimbi",
-                "Bukwo",
-                "Bulambuli",
-                "Buliisa",
-                "Bundibugyo",
-                "Bunyangabu",
-                "Bushenyi",
-                "Busia",
-                "Butaleja",
-                "Butambala",
-                "Butebo",
-                "Buvuma",
-                "Buyende",
-                "Dokolo",
-                "Gomba",
-                "Gulu",
-                "Hoima",
-                "Ibanda",
-                "Iganga",
-                "Isingiro",
-                "Jinja",
-                "Kaabong",
-                "Kabale",
-                "Kabarole",
-                "Kaberamaido",
-                "Kagadi",
-                "Kagwema",
-                "Kakumiro",
-                "Kalangala",
-                "Kaliro",
-                "Kalungu",
-                "Kampala (Capital City)",
-                "Kamuli",
-                "Kamwenge",
-                "Kanungu",
-                "Kapchorwa",
-                "Kapelebyong",
-                "Kasese",
-                "Katakwi",
-                "Kayunga",
-                "Kibaale",
-                "Kiboga",
-                "Kiruhura",
-                "Kiryandongo",
-                "Kisoro",
-                "Kitgum",
-                "Koboko",
-                "Kole",
-                "Kotido",
-                "Kumi",
-                "Kwania",
-                "Kween",
-                "Kyankwanzi",
-                "Kyegegwa",
-                "Kyenjojo",
-                "Lamwo",
-                "Lira",
-                "Luuka",
-                "Luwero",
-                "Lwengo",
-                "Lyantonde",
-                "Manafwa",
-                "Maracha",
-                "Masaka",
-                "Masindi",
-                "Mayuge",
-                "Mbale",
-                "Mbarara",
-                "Mitooma",
-                "Mityana",
-                "Moroto",
-                "Moyo",
-                "Mpigi",
-                "Mubende",
-                "Mukono",
-                "Nabilatuk",
-                "Nakapiripirit",
-                "Nakaseke",
-                "Nakasongola",
-                "Namayingo",
-                "Namisindwa",
-                "Namutumba",
-                "Napak",
-                "Nebbi",
-                "Ngora",
-                "Nsiika",
-                "Ntoroko",
-                "Ntungamo",
-                "Nwoya",
-                "Omoro",
-                "Otuke",
-                "Oyam",
-                "Pader",
-                "Pakwach",
-                "Pallisa",
-                "Rakai",
-                "Rubanda",
-                "Rubirizi",
-                "Rukiga",
-                "Rukungiri",
-                "Rwampara",
-                "Sembabule",
-                "Serere",
-                "Sheema",
-                "Sironko",
-                "Soroti",
-                "Tororo",
-                "Wakiso",
-                "Yumbe"
-            ]
-        },
-        "zambia_province": {
-            "type": "string",
-            "enum": [
-                "Central Province",
-                "Copperbelt Province",
-                "Eastern Province",
-                "Luapula Province",
-                "Lusaka Province (includes the capital city, Lusaka)",
-                "Muchinga Province",
-                "Northern Province",
-                "North-Western Province",
-                "Southern Province",
-                "Western Province"
-            ]
-        },
-        "zimbabwe_province": {
-            "type": "string",
-            "enum": [
-                "Bulawayo",
-                "Harare (Capital Territory)",
-                "Manicaland",
-                "Mashonaland Central",
-                "Mashonaland East",
-                "Mashonaland West",
-                "Masvingo",
-                "Matabeleland North",
-                "Matabeleland South",
-                "Midlands"
-            ]
-        }
-      }
-    },
     "required": [
-      "sample_collection",  
+      "sample_collection",
       "host",
       "experiment",
       "sequence_analysis",
@@ -1250,7 +17,7 @@
             "type": [
               "string",
               "null"
-            ]            
+            ]
           }
         },
         "propertyNames": {
@@ -1262,24 +29,24 @@
       "sample_collection": {
         "type": "object",
         "required": [
-            "sample_collected_by",
-            "sequence_submitted_by",
-            "sample_collection_date",
-            "sample_collection_date_null_reason",
-            "geo_loc_country",
-            "geo_loc_province",
-            "organism",
-            "isolate",
-            "fasta_header_name",  
-            "purpose_of_sampling",
-            "purpose_of_sampling_details",
-            "anatomical_material",
-            "anatomical_part",
-            "body_product",
-            "environmental_material",
-            "environmental_site",
-            "collection_device",
-            "collection_method"
+          "sample_collected_by",
+          "sequence_submitted_by",
+          "sample_collection_date",
+          "sample_collection_date_null_reason",
+          "geo_loc_country",
+          "geo_loc_province",
+          "organism",
+          "isolate",
+          "fasta_header_name",
+          "purpose_of_sampling",
+          "purpose_of_sampling_details",
+          "anatomical_material",
+          "anatomical_part",
+          "body_product",
+          "environmental_material",
+          "environmental_site",
+          "collection_device",
+          "collection_method"
         ],
         "properties": {
           "sample_collected_by": {
@@ -1317,7 +84,62 @@
             ]
           },
           "geo_loc_country": {
-            "$ref": "#/definitions/geospatial/country"
+            "type": "string",
+            "enum": [
+              "Angola",
+              "Benin",
+              "Botswana",
+              "Burkina Faso",
+              "Burundi",
+              "Cameroon",
+              "Cape verde",
+              "Central African Republic",
+              "Chad",
+              "Comoros",
+              "C\u00f4te d'Ivoire",
+              "Democratic Republic of Congo",
+              "Republic of the Congo",
+              "Djibouti",
+              "Egypt",
+              "Equatorial Guinea",
+              "Eritrea",
+              "Eswatini",
+              "Ethiopia",
+              "Gabon",
+              "Gambia",
+              "Ghana",
+              "Guinea",
+              "Guinea Bissau",
+              "Kenya",
+              "Lesotho",
+              "Liberia",
+              "Libya",
+              "Madagascar",
+              "Malawi",
+              "Mali",
+              "Mauritania",
+              "Mauritius",
+              "Morocco",
+              "Mozambique",
+              "Namibia",
+              "Niger",
+              "Nigeria",
+              "Rwanda",
+              "Sao Tome",
+              "Senegal",
+              "Seychelles",
+              "Sierra Leone",
+              "Somalia",
+              "South Africa",
+              "South Sudan",
+              "Sudan",
+              "Tanzania",
+              "Togo",
+              "Tunisia",
+              "Uganda",
+              "Zambia",
+              "Zimbabwe"
+            ]
           },
           "geo_loc_city": {
             "type": [
@@ -1385,9 +207,9 @@
             ]
           },
           "anatomical_part": {
-            "type":"array",
-            "items":{
-              "type":"string",
+            "type": "array",
+            "items": {
+              "type": "string",
               "enum": [
                 "Alveolar sac",
                 "Anterior Nares",
@@ -1602,7 +424,7 @@
         "else": {
           "properties": {
             "sample_collection_date_null_reason": {
-              "const": null 
+              "const": null
             }
           }
         },
@@ -1618,7 +440,27 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/angola_province"
+                  "type": "string",
+                  "enum": [
+                    "Bengo",
+                    "Benguela",
+                    "Bi\u00e9",
+                    "Cabinda",
+                    "Cuando Cubango",
+                    "Cuanza Norte",
+                    "Cuanza Sul",
+                    "Cunene",
+                    "Huambo",
+                    "Hu\u00edla",
+                    "Luanda ",
+                    "Lunda Norte",
+                    "Lunda Sul",
+                    "Malanje",
+                    "Moxico",
+                    "Namibe",
+                    "U\u00edge",
+                    "Zaire"
+                  ]
                 }
               }
             }
@@ -1634,7 +476,22 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/benin_province"
+                  "type": "string",
+                  "enum": [
+                    "Benin",
+                    "Alibori",
+                    "Atakora",
+                    "Atlantique",
+                    "Borgou",
+                    "Collines",
+                    "Donga",
+                    "Kouffo",
+                    "Littoral",
+                    "Mono",
+                    "Ou\u00e9m\u00e9",
+                    "Plateau",
+                    "Zou"
+                  ]
                 }
               }
             }
@@ -1650,7 +507,25 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/botswana_province"
+                  "type": "string",
+                  "enum": [
+                    "Central District",
+                    "Chobe District",
+                    "Francistown District",
+                    "Gaborone District",
+                    "Ghanzi District",
+                    "Jwaneng District",
+                    "Kgalagadi District",
+                    "Kgatleng District",
+                    "Kweneng District",
+                    "Lobatse District",
+                    "North-East District",
+                    "North-West District",
+                    "Selibe Phikwe District",
+                    "South-East District",
+                    "Southern District",
+                    "Sowa Town"
+                  ]
                 }
               }
             }
@@ -1666,7 +541,22 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/burkina_faso_province"
+                  "type": "string",
+                  "enum": [
+                    "Boucle du Mouhoun",
+                    "Cascades",
+                    "Centre",
+                    "Centre Est",
+                    "Centre Nord",
+                    "Centre Ouest",
+                    "Centre Sud",
+                    "Est",
+                    "Hauts Bassins",
+                    "Nord",
+                    "Plateau Central",
+                    "Sahel",
+                    "Sud Ouest"
+                  ]
                 }
               }
             }
@@ -1682,7 +572,27 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/burundi_province"
+                  "type": "string",
+                  "enum": [
+                    "Bubanza",
+                    "Bujumbura Mairie (Bujumbura City)",
+                    "Bujumbura Rural",
+                    "Bururi",
+                    "Cankuzo",
+                    "Cibitoke",
+                    "Gitega",
+                    "Karuzi",
+                    "Kayanza",
+                    "Kirundo",
+                    "Makamba",
+                    "Muramvya",
+                    "Muyinga",
+                    "Mwaro",
+                    "Ngozi",
+                    "Rumonge",
+                    "Rutana",
+                    "Ruyigi"
+                  ]
                 }
               }
             }
@@ -1698,7 +608,19 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/cameroon_province"
+                  "type": "string",
+                  "enum": [
+                    "Adamawa",
+                    "Centre",
+                    "East",
+                    "Far North",
+                    "Littoral",
+                    "North",
+                    "Northwest",
+                    "South",
+                    "Southwest",
+                    "West"
+                  ]
                 }
               }
             }
@@ -1714,7 +636,31 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/cape_verde_province"
+                  "type": "string",
+                  "enum": [
+                    "Boa Vista",
+                    "Brava",
+                    "Maio",
+                    "Mosteiros",
+                    "Paul",
+                    "Porto Novo",
+                    "Praia",
+                    "Ribeira Brava",
+                    "Ribeira Grande",
+                    "Ribeira Grande de Santiago",
+                    "Sal",
+                    "Santa Catarina",
+                    "Santa Catarina do Fogo",
+                    "Santa Cruz",
+                    "S\u00e3o Domingos",
+                    "S\u00e3o Filipe",
+                    "S\u00e3o Louren\u00e7o dos \u00d3rg\u00e3os",
+                    "S\u00e3o Miguel",
+                    "S\u00e3o Salvador do Mundo",
+                    "S\u00e3o Vicente",
+                    "Tarrafal",
+                    "Tarrafal de S\u00e3o Nicolau"
+                  ]
                 }
               }
             }
@@ -1730,7 +676,25 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/central_african_republic_province"
+                  "type": "string",
+                  "enum": [
+                    "Bamingui-Bangoran",
+                    "Bangui (Capital District)",
+                    "Basse-Kotto",
+                    "Haute-Kotto",
+                    "Haut-Mbomou",
+                    "K\u00e9mo",
+                    "Lobaye",
+                    "Mamb\u00e9r\u00e9-Kad\u00e9\u00ef",
+                    "Mbomou",
+                    "Nana-Gr\u00e9bizi",
+                    "Nana-Mamb\u00e9r\u00e9",
+                    "Ombella-M'Poko",
+                    "Ouaka",
+                    "Ouham",
+                    "Ouham-Pend\u00e9",
+                    "Vakaga"
+                  ]
                 }
               }
             }
@@ -1746,7 +710,32 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/chad_province"
+                  "type": "string",
+                  "enum": [
+                    "Barh El Gazel",
+                    "Batha",
+                    "Borkou",
+                    "Chari-Baguirmi",
+                    "Ennedi Est",
+                    "Ennedi Ouest",
+                    "Gu\u00e9ra",
+                    "Hadjer-Lamis",
+                    "Kanem",
+                    "Lac",
+                    "Logone Occidental",
+                    "Logone Oriental",
+                    "Mandoul",
+                    "Mayo-Kebbi Est",
+                    "Mayo-Kebbi Ouest",
+                    "Moyen-Chari",
+                    "N'Djamena (Capital Region)",
+                    "Ouadda\u00ef",
+                    "Salamat",
+                    "Sila",
+                    "Tandjil\u00e9",
+                    "Tibesti",
+                    "Wadi Fira"
+                  ]
                 }
               }
             }
@@ -1755,14 +744,19 @@
             "if": {
               "properties": {
                 "geo_loc_country": {
-                  "const": "Camoros"
+                  "const": "Comoros"
                 }
               }
             },
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/camoros_province"
+                  "type": "string",
+                  "enum": [
+                    "Grande Comore (also known as Ngazidja)",
+                    "Anjouan (also known as Ndzuwani)",
+                    "Moh\u00e9li (also known as Mwali)"
+                  ]
                 }
               }
             }
@@ -1778,7 +772,35 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/democratic_republic_of_congo_province"
+                  "type": "string",
+                  "enum": [
+                    "Bas-U\u00e9l\u00e9",
+                    "\u00c9quateur",
+                    "Haut-Katanga",
+                    "Haut-Lomami",
+                    "Haut-U\u00e9l\u00e9",
+                    "Ituri",
+                    "Kasa\u00ef",
+                    "Kasa\u00ef-Central",
+                    "Kasa\u00ef-Oriental",
+                    "Kinshasa (Capital city, also a province)",
+                    "Kongo-Central",
+                    "Kwango",
+                    "Kwilu",
+                    "Lomami",
+                    "Lualaba",
+                    "Mai-Ndombe",
+                    "Maniema",
+                    "Mongala",
+                    "Nord-Ubangi",
+                    "Nord-Kivu",
+                    "Sankuru",
+                    "Sud-Ubangi",
+                    "Sud-Kivu",
+                    "Tanganyika",
+                    "Tshopo",
+                    "Tshuapa"
+                  ]
                 }
               }
             }
@@ -1794,7 +816,21 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/republic_of_the_congo_province"
+                  "type": "string",
+                  "enum": [
+                    "Bouenza",
+                    "Brazzaville (Capital District)",
+                    "Cuvette",
+                    "Cuvette-Ouest",
+                    "Kouilou",
+                    "L\u00e9koumou",
+                    "Likouala",
+                    "Niari",
+                    "Plateaux",
+                    "Pointe-Noire",
+                    "Pool",
+                    "Sangha"
+                  ]
                 }
               }
             }
@@ -1810,7 +846,23 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/ivory_coast_province"
+                  "type": "string",
+                  "enum": [
+                    "Abidjan",
+                    "Bas-Sassandra",
+                    "Como\u00e9",
+                    "Dengu\u00e9l\u00e9",
+                    "G\u00f4h",
+                    "Lacs",
+                    "Lagunes",
+                    "Montagnes",
+                    "Sassandra-Marahou\u00e9",
+                    "Savanes",
+                    "Vall\u00e9e du Bandama",
+                    "Worodougou",
+                    "Yamoussoukro (Autonomous District)",
+                    "Zanzan"
+                  ]
                 }
               }
             }
@@ -1826,7 +878,15 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/djibouti_province"
+                  "type": "string",
+                  "enum": [
+                    "Ali Sabieh",
+                    "Arta",
+                    "Dikhil",
+                    "Djibouti City (Capital District)",
+                    "Obock",
+                    "Tadjourah"
+                  ]
                 }
               }
             }
@@ -1842,7 +902,36 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/egypt_province"
+                  "type": "string",
+                  "enum": [
+                    "Alexandria",
+                    "Aswan",
+                    "Asyut",
+                    "Beheira",
+                    "Beni Suef",
+                    "Cairo",
+                    "Dakahlia",
+                    "Damietta",
+                    "Faiyum",
+                    "Gharbia",
+                    "Giza",
+                    "Ismailia",
+                    "Kafr El Sheikh",
+                    "Luxor",
+                    "Matrouh",
+                    "Minya",
+                    "Monufia",
+                    "New Valley",
+                    "North Sinai",
+                    "Port Said",
+                    "Qalyubia",
+                    "Qena",
+                    "Red Sea",
+                    "Sharqia",
+                    "Sohag",
+                    "South Sinai",
+                    "Suez"
+                  ]
                 }
               }
             }
@@ -1858,7 +947,17 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/equatorial_guinea_province"
+                  "type": "string",
+                  "enum": [
+                    "Annob\u00f3n",
+                    "Bioko Norte",
+                    "Bioko Sur",
+                    "Centro Sur",
+                    "Ki\u00e9-Ntem",
+                    "Litoral",
+                    "Wele-Nzas",
+                    "Djibloho"
+                  ]
                 }
               }
             }
@@ -1874,7 +973,15 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/eritrea_province"
+                  "type": "string",
+                  "enum": [
+                    "Anseba",
+                    "Debub (South)",
+                    "Debubawi Keyih Bahri (Southern Red Sea)",
+                    "Gash-Barka",
+                    "Maekel (Central)",
+                    "Semenawi Keyih Bahri (Northern Red Sea)"
+                  ]
                 }
               }
             }
@@ -1890,7 +997,13 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/eswatini_province"
+                  "type": "string",
+                  "enum": [
+                    "Hhohho",
+                    "Lubombo",
+                    "Manzini",
+                    "Shiselweni"
+                  ]
                 }
               }
             }
@@ -1906,7 +1019,21 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/ethiopia_province"
+                  "type": "string",
+                  "enum": [
+                    "Afar",
+                    "Amhara",
+                    "Benishangul-Gumuz",
+                    "Dire Dawa (Chartered City)",
+                    "Gambela",
+                    "Harari",
+                    "Oromia",
+                    "Somali",
+                    "Southern Nations, Nationalities, and Peoples' Region (SNNPR)",
+                    "Tigray",
+                    "Addis Ababa (Chartered City)",
+                    "Sidama (Newly created region as of November 2020)"
+                  ]
                 }
               }
             }
@@ -1922,7 +1049,18 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/gabon_province"
+                  "type": "string",
+                  "enum": [
+                    "Estuaire",
+                    "Haut-Ogoou\u00e9",
+                    "Moyen-Ogoou\u00e9",
+                    "Ngouni\u00e9",
+                    "Nyanga",
+                    "Ogoou\u00e9-Ivindo",
+                    "Ogoou\u00e9-Lolo",
+                    "Ogoou\u00e9-Maritime",
+                    "Woleu-Ntem"
+                  ]
                 }
               }
             }
@@ -1938,7 +1076,14 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/gambia_province"
+                  "type": "string",
+                  "enum": [
+                    "Banjul (City)",
+                    "Central River",
+                    "Lower River",
+                    "North Bank",
+                    "Upper River"
+                  ]
                 }
               }
             }
@@ -1954,7 +1099,25 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/ghana_province"
+                  "type": "string",
+                  "enum": [
+                    "Ashanti",
+                    "Bono",
+                    "Bono East",
+                    "Central",
+                    "Eastern",
+                    "Greater Accra",
+                    "North East",
+                    "Northern",
+                    "Oti",
+                    "Savannah",
+                    "Upper East",
+                    "Upper West",
+                    "Volta",
+                    "Western",
+                    "Western North",
+                    "Ahafo"
+                  ]
                 }
               }
             }
@@ -1970,7 +1133,17 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/guinea_province"
+                  "type": "string",
+                  "enum": [
+                    "Bok\u00e9",
+                    "Conakry (Special Zone)",
+                    "Faranah",
+                    "Kankan",
+                    "Kindia",
+                    "Lab\u00e9",
+                    "Mamou",
+                    "Nz\u00e9r\u00e9kor\u00e9"
+                  ]
                 }
               }
             }
@@ -1986,7 +1159,18 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/guinea_bissau_province"
+                  "type": "string",
+                  "enum": [
+                    "Bafat\u00e1",
+                    "Biombo",
+                    "Bissau Autonomous Region (also known as Bissau)",
+                    "Bolama",
+                    "Cacheu",
+                    "Gab\u00fa",
+                    "Oio",
+                    "Quinara",
+                    "Tombali"
+                  ]
                 }
               }
             }
@@ -2002,7 +1186,56 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/kenya_province"
+                  "type": "string",
+                  "enum": [
+                    "Baringo",
+                    "Bomet",
+                    "Bungoma",
+                    "Busia",
+                    "Elgeyo-Marakwet",
+                    "Embu",
+                    "Garissa",
+                    "Homa Bay",
+                    "Isiolo",
+                    "Kajiado",
+                    "Kakamega",
+                    "Kericho",
+                    "Kiambu",
+                    "Kilifi",
+                    "Kirinyaga",
+                    "Kisii",
+                    "Kisumu",
+                    "Kitui",
+                    "Kwale",
+                    "Laikipia",
+                    "Lamu",
+                    "Machakos",
+                    "Makueni",
+                    "Mandera",
+                    "Marsabit",
+                    "Meru",
+                    "Migori",
+                    "Mombasa",
+                    "Murang'a",
+                    "Nairobi City",
+                    "Nakuru",
+                    "Nandi",
+                    "Narok",
+                    "Nyamira",
+                    "Nyandarua",
+                    "Nyeri",
+                    "Samburu",
+                    "Siaya",
+                    "Taita-Taveta",
+                    "Tana River",
+                    "Tharaka-Nithi",
+                    "Trans-Nzoia",
+                    "Turkana",
+                    "Uasin Gishu",
+                    "Vihiga",
+                    "Wajir",
+                    "West Pokot"
+                  ]
                 }
               }
             }
@@ -2018,7 +1251,19 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/lesotho_province"
+                  "type": "string",
+                  "enum": [
+                    "Berea",
+                    "Butha-Buthe",
+                    "Leribe",
+                    "Mafeteng",
+                    "Maseru",
+                    "Mohale's Hoek",
+                    "Mokhotlong",
+                    "Qacha's Nek",
+                    "Quthing",
+                    "Thaba-Tseka"
+                  ]
                 }
               }
             }
@@ -2034,7 +1279,24 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/liberia_province"
+                  "type": "string",
+                  "enum": [
+                    "Bomi",
+                    "Bong",
+                    "Gbarpolu",
+                    "Grand Bassa",
+                    "Grand Cape Mount",
+                    "Grand Gedeh",
+                    "Grand Kru",
+                    "Lofa",
+                    "Margibi",
+                    "Maryland",
+                    "Montserrado (Capital County)",
+                    "Nimba",
+                    "River Cess",
+                    "River Gee",
+                    "Sinoe"
+                  ]
                 }
               }
             }
@@ -2050,7 +1312,31 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/libya_province"
+                  "type": "string",
+                  "enum": [
+                    "Al Wahat",
+                    "Benghazi",
+                    "Butnan",
+                    "Derna",
+                    "Ghat",
+                    "Jabal al Akhdar",
+                    "Jabal al Gharbi",
+                    "Jafara",
+                    "Jufra",
+                    "Kufra",
+                    "Marj",
+                    "Misrata",
+                    "Murqub",
+                    "Murzuq",
+                    "Nalut",
+                    "Sabha",
+                    "Sirt",
+                    "Tripoli",
+                    "Wadi al Hayaa",
+                    "Wadi al Shatii",
+                    "Wadi al Juf",
+                    "Zawiya"
+                  ]
                 }
               }
             }
@@ -2066,7 +1352,31 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/madagascar_province"
+                  "type": "string",
+                  "enum": [
+                    "Alaotra-Mangoro",
+                    "Amoron'i Mania",
+                    "Analamanga",
+                    "Analanjirofo",
+                    "Androy",
+                    "Anosy",
+                    "Atsinanana",
+                    "Atsimo-Andrefana",
+                    "Atsimo-Atsinanana",
+                    "Atsimo-Beta",
+                    "Atsimo-Atsinanana",
+                    "Boeny",
+                    "Betsiboka",
+                    "Haute Matsiatra",
+                    "Ihorombe",
+                    "Itasy",
+                    "Melaky",
+                    "Menabe",
+                    "Sava",
+                    "Sofia",
+                    "Vakinankaratra",
+                    "Vatovavy-Fitovinany"
+                  ]
                 }
               }
             }
@@ -2082,7 +1392,37 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/malawi_province"
+                  "type": "string",
+                  "enum": [
+                    "Balaka",
+                    "Blantyre",
+                    "Chikwawa",
+                    "Chiradzulu",
+                    "Chitipa",
+                    "Dedza",
+                    "Dowa",
+                    "Karonga",
+                    "Kasungu",
+                    "Likoma",
+                    "Lilongwe",
+                    "Machinga",
+                    "Mangochi",
+                    "Mchinji",
+                    "Mulanje",
+                    "Mwanza",
+                    "Mzimba",
+                    "Neno",
+                    "Nkhata Bay",
+                    "Nkhotakota",
+                    "Nsanje",
+                    "Ntcheu",
+                    "Ntchisi",
+                    "Phalombe",
+                    "Rumphi",
+                    "Salima",
+                    "Thyolo",
+                    "Zomba"
+                  ]
                 }
               }
             }
@@ -2098,7 +1438,19 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/mali_province"
+                  "type": "string",
+                  "enum": [
+                    "Bamako (Capital District)",
+                    "Gao",
+                    "Kayes",
+                    "Kidal",
+                    "Koulikoro",
+                    "Mopti",
+                    "S\u00e9gou",
+                    "Sikasso",
+                    "Taoud\u00e9nit",
+                    "Tombouctou"
+                  ]
                 }
               }
             }
@@ -2114,7 +1466,22 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/mauritania_province"
+                  "type": "string",
+                  "enum": [
+                    "Adrar",
+                    "Assaba",
+                    "Brakna",
+                    "Dakhlet Nouadhibou",
+                    "Gorgol",
+                    "Guidimaka",
+                    "Hodh Ech Chargui",
+                    "Hodh El Gharbi",
+                    "Inchiri",
+                    "Nouakchott (Capital District)",
+                    "Tagant",
+                    "Tiris Zemmour",
+                    "Trarza"
+                  ]
                 }
               }
             }
@@ -2130,7 +1497,20 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/mauritius_province"
+                  "type": "string",
+                  "enum": [
+                    "Black River",
+                    "Flacq",
+                    "Grand Port",
+                    "Moka",
+                    "Pamplemousses",
+                    "Plaines Wilhems",
+                    "Port Louis (Capital District)",
+                    "Rivi\u00e8re du Rempart",
+                    "Savanne",
+                    "Rodrigues",
+                    "Agalega Islands"
+                  ]
                 }
               }
             }
@@ -2146,7 +1526,21 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/morocco_province"
+                  "type": "string",
+                  "enum": [
+                    "Tanger-Tetouan-Al Hoceima",
+                    "Oriental",
+                    "F\u00e8s-Mekn\u00e8s",
+                    "Rabat-Sal\u00e9-K\u00e9nitra",
+                    "B\u00e9ni Mellal-Kh\u00e9nifra",
+                    "Casablanca-Settat",
+                    "Marrakech-Safi",
+                    "Dr\u00e2a-Tafilalet",
+                    "Souss-Massa",
+                    "Guelmim-Oued Noun",
+                    "La\u00e2youne-Sakia El Hamra",
+                    "Dakhla-Oued Ed-Dahab"
+                  ]
                 }
               }
             }
@@ -2162,7 +1556,22 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/mozambique_province"
+                  "type": "string",
+                  "enum": [
+                    "Cabo Delgado",
+                    "Gaza",
+                    "Inhambane",
+                    "Manica",
+                    "Maputo (includes the capital city, Maputo)",
+                    "Nampula",
+                    "Niassa",
+                    "Sofala",
+                    "Tete",
+                    "Zambezia",
+                    "",
+                    "",
+                    "Maputo"
+                  ]
                 }
               }
             }
@@ -2178,7 +1587,23 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/namibia_province"
+                  "type": "string",
+                  "enum": [
+                    "Zambezi",
+                    "Erongo",
+                    "Hardap",
+                    "Karas",
+                    "Kavango East",
+                    "Kavango West",
+                    "Khomas (includes the capital city, Windhoek)",
+                    "Kunene",
+                    "Ohangwena",
+                    "Omaheke",
+                    "Omusati",
+                    "Oshana",
+                    "Oshikoto",
+                    "Otjozondjupa"
+                  ]
                 }
               }
             }
@@ -2194,7 +1619,17 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/niger_province"
+                  "type": "string",
+                  "enum": [
+                    "Agadez",
+                    "Diffa",
+                    "Dosso",
+                    "Maradi",
+                    "Tahoua",
+                    "Tillab\u00e9ri",
+                    "Zinder",
+                    "Niamey (Capital District)"
+                  ]
                 }
               }
             }
@@ -2210,7 +1645,46 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/nigeria_province"
+                  "type": "string",
+                  "enum": [
+                    "Abia",
+                    "Adamawa",
+                    "Akwa Ibom",
+                    "Anambra",
+                    "Bauchi",
+                    "Bayelsa",
+                    "Benue",
+                    "Borno",
+                    "Cross River",
+                    "Delta",
+                    "Ebonyi",
+                    "Edo",
+                    "Ekiti",
+                    "Enugu",
+                    "Gombe",
+                    "Imo",
+                    "Jigawa",
+                    "Kaduna",
+                    "Kano",
+                    "Katsina",
+                    "Kebbi",
+                    "Kogi",
+                    "Kwara",
+                    "Lagos",
+                    "Nasarawa",
+                    "Niger",
+                    "Ogun",
+                    "Ondo",
+                    "Osun",
+                    "Oyo",
+                    "Plateau",
+                    "Rivers",
+                    "Sokoto",
+                    "Taraba",
+                    "Yobe",
+                    "Zamfara",
+                    "Abuja"
+                  ]
                 }
               }
             }
@@ -2226,7 +1700,14 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/rwanda_province"
+                  "type": "string",
+                  "enum": [
+                    "Eastern Province",
+                    "Northern Province",
+                    "Southern Province",
+                    "Western Province",
+                    "Kigali City (Capital City)"
+                  ]
                 }
               }
             }
@@ -2242,7 +1723,11 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/sao_tome_province"
+                  "type": "string",
+                  "enum": [
+                    "S\u00e3o Tom\u00e9 Province",
+                    "Pr\u00edncipe Province"
+                  ]
                 }
               }
             }
@@ -2258,7 +1743,23 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/senegal_province"
+                  "type": "string",
+                  "enum": [
+                    "Dakar",
+                    "Diourbel",
+                    "Fatick",
+                    "Kaffrine",
+                    "Kaolack",
+                    "K\u00e9dougou",
+                    "Kolda",
+                    "Louga",
+                    "Matam",
+                    "Saint-Louis",
+                    "Sedhiou",
+                    "Tambacounda",
+                    "Thies",
+                    "Ziguinchor"
+                  ]
                 }
               }
             }
@@ -2274,7 +1775,35 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/seychelles_province"
+                  "type": "string",
+                  "enum": [
+                    "Anse aux Pins",
+                    "Anse Boileau",
+                    "Anse Etoile",
+                    "Anse Royale",
+                    "Baie Lazare",
+                    "Baie Sainte Anne",
+                    "Beau Vallon",
+                    "Bel Air",
+                    "Bel Ombre",
+                    "Cascade",
+                    "English River",
+                    "Glacis",
+                    "Grand' Anse (Praslin)",
+                    "Grand' Anse Mahe",
+                    "Inner Islands",
+                    "Les Mamelles",
+                    "Mont Buxton",
+                    "Mont Fleuri",
+                    "Plaisance",
+                    "Pointe La Rue",
+                    "Port Glaud",
+                    "Roche Caiman",
+                    "Saint Louis",
+                    "Takamaka",
+                    "Outer Islands",
+                    "Sube (Farquhar Group)"
+                  ]
                 }
               }
             }
@@ -2290,7 +1819,25 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/sierra_leone_province"
+                  "type": "string",
+                  "enum": [
+                    "Bombali District",
+                    "Bonthe District",
+                    "Falaba District",
+                    "Kailahun District",
+                    "Kambia District",
+                    "Karene District",
+                    "Kenema District",
+                    "Koinadugu District",
+                    "Kono District",
+                    "Moyamba District",
+                    "Port Loko District",
+                    "Pujehun District",
+                    "Tonkolili District",
+                    "Western Area Rural District",
+                    "Western Area Urban District (includes the capital city, Freetown)",
+                    "Bo District"
+                  ]
                 }
               }
             }
@@ -2306,7 +1853,27 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/somalia_province"
+                  "type": "string",
+                  "enum": [
+                    "Awdal",
+                    "Bakool",
+                    "Banaadir (includes the capital city, Mogadishu)",
+                    "Bari",
+                    "Bay",
+                    "Galguduud",
+                    "Gedo",
+                    "Hiraan",
+                    "Middle Juba",
+                    "Lower Juba",
+                    "Middle Shabelle",
+                    "Lower Shabelle",
+                    "Mudug",
+                    "Nugaal",
+                    "Sanaag",
+                    "Sool",
+                    "Togdheer",
+                    "Woqooyi Galbeed"
+                  ]
                 }
               }
             }
@@ -2322,7 +1889,18 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/south_africa_province"
+                  "type": "string",
+                  "enum": [
+                    "Eastern Cape",
+                    "Free State",
+                    "Gauteng",
+                    "KwaZulu-Natal",
+                    "Limpopo",
+                    "Mpumalanga",
+                    "Northern Cape",
+                    "North West",
+                    "Western Cape"
+                  ]
                 }
               }
             }
@@ -2338,7 +1916,19 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/south_sudan_province"
+                  "type": "string",
+                  "enum": [
+                    "Central Equatoria",
+                    "Eastern Equatoria",
+                    "Jonglei",
+                    "Lakes",
+                    "Northern Bahr el Ghazal",
+                    "Unity",
+                    "Upper Nile",
+                    "Warrap",
+                    "Western Bahr el Ghazal",
+                    "Western Equatoria"
+                  ]
                 }
               }
             }
@@ -2354,7 +1944,28 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/sudan_province"
+                  "type": "string",
+                  "enum": [
+                    "South_Sudan",
+                    "Al Qadarif",
+                    "Blue Nile",
+                    "Central Darfur",
+                    "East Darfur",
+                    "Gedaref",
+                    "Kassala",
+                    "Khartoum (Capital Territory)",
+                    "North Darfur",
+                    "North Kordofan",
+                    "Northern",
+                    "Red Sea",
+                    "River Nile",
+                    "Sennar",
+                    "South Darfur",
+                    "South Kordofan",
+                    "West Darfur",
+                    "West Kordofan",
+                    "White Nile"
+                  ]
                 }
               }
             }
@@ -2370,7 +1981,40 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/tanzania_province"
+                  "type": "string",
+                  "enum": [
+                    "Arusha",
+                    "Dar es Salaam (Capital Territory)",
+                    "Dodoma (Capital Territory)",
+                    "Geita",
+                    "Iringa",
+                    "Kagera",
+                    "Katavi",
+                    "Kigoma",
+                    "Kilimanjaro",
+                    "Lindi",
+                    "Manyara",
+                    "Mara",
+                    "Mbeya",
+                    "Morogoro",
+                    "Mtwara",
+                    "Mwanza",
+                    "Njombe",
+                    "Pemba North",
+                    "Pemba South",
+                    "Pwani",
+                    "Rukwa",
+                    "Ruvuma",
+                    "Shinyanga",
+                    "Simiyu",
+                    "Singida",
+                    "Songwe",
+                    "Tabora",
+                    "Tanga",
+                    "Zanzibar Central/South",
+                    "Zanzibar North",
+                    "Zanzibar Urban/West"
+                  ]
                 }
               }
             }
@@ -2386,7 +2030,14 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/togo_province"
+                  "type": "string",
+                  "enum": [
+                    "Savanes Region",
+                    "Kara Region",
+                    "Centrale Region",
+                    "Plateaux Region",
+                    "Maritime Region"
+                  ]
                 }
               }
             }
@@ -2402,7 +2053,33 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/tunisia_province"
+                  "type": "string",
+                  "enum": [
+                    "Ariana",
+                    "Beja",
+                    "Ben Arous",
+                    "Bizerte",
+                    "Gabes",
+                    "Gafsa",
+                    "Jendouba",
+                    "Kairouan",
+                    "Kasserine",
+                    "Kebili",
+                    "Kef",
+                    "Mahdia",
+                    "Manouba",
+                    "Medenine",
+                    "Monastir",
+                    "Nabeul",
+                    "Sfax",
+                    "Sidi Bouzid",
+                    "Siliana",
+                    "Sousse",
+                    "Tataouine",
+                    "Tozeur",
+                    "Tunis (includes the capital city, Tunis)",
+                    "Zaghouan"
+                  ]
                 }
               }
             }
@@ -2418,7 +2095,134 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/uganda_province"
+                  "type": "string",
+                  "enum": [
+                    "Abim",
+                    "Adjumani",
+                    "Agago",
+                    "Alebtong",
+                    "Amolatar",
+                    "Amudat",
+                    "Amuria",
+                    "Amuru",
+                    "Apac",
+                    "Arua",
+                    "Budaka",
+                    "Bududa",
+                    "Bugiri",
+                    "Buhweju",
+                    "Buikwe",
+                    "Bukedea",
+                    "Bukomansimbi",
+                    "Bukwo",
+                    "Bulambuli",
+                    "Buliisa",
+                    "Bundibugyo",
+                    "Bunyangabu",
+                    "Bushenyi",
+                    "Busia",
+                    "Butaleja",
+                    "Butambala",
+                    "Butebo",
+                    "Buvuma",
+                    "Buyende",
+                    "Dokolo",
+                    "Gomba",
+                    "Gulu",
+                    "Hoima",
+                    "Ibanda",
+                    "Iganga",
+                    "Isingiro",
+                    "Jinja",
+                    "Kaabong",
+                    "Kabale",
+                    "Kabarole",
+                    "Kaberamaido",
+                    "Kagadi",
+                    "Kagwema",
+                    "Kakumiro",
+                    "Kalangala",
+                    "Kaliro",
+                    "Kalungu",
+                    "Kampala (Capital City)",
+                    "Kamuli",
+                    "Kamwenge",
+                    "Kanungu",
+                    "Kapchorwa",
+                    "Kapelebyong",
+                    "Kasese",
+                    "Katakwi",
+                    "Kayunga",
+                    "Kibaale",
+                    "Kiboga",
+                    "Kiruhura",
+                    "Kiryandongo",
+                    "Kisoro",
+                    "Kitgum",
+                    "Koboko",
+                    "Kole",
+                    "Kotido",
+                    "Kumi",
+                    "Kwania",
+                    "Kween",
+                    "Kyankwanzi",
+                    "Kyegegwa",
+                    "Kyenjojo",
+                    "Lamwo",
+                    "Lira",
+                    "Luuka",
+                    "Luwero",
+                    "Lwengo",
+                    "Lyantonde",
+                    "Manafwa",
+                    "Maracha",
+                    "Masaka",
+                    "Masindi",
+                    "Mayuge",
+                    "Mbale",
+                    "Mbarara",
+                    "Mitooma",
+                    "Mityana",
+                    "Moroto",
+                    "Moyo",
+                    "Mpigi",
+                    "Mubende",
+                    "Mukono",
+                    "Nabilatuk",
+                    "Nakapiripirit",
+                    "Nakaseke",
+                    "Nakasongola",
+                    "Namayingo",
+                    "Namisindwa",
+                    "Namutumba",
+                    "Napak",
+                    "Nebbi",
+                    "Ngora",
+                    "Nsiika",
+                    "Ntoroko",
+                    "Ntungamo",
+                    "Nwoya",
+                    "Omoro",
+                    "Otuke",
+                    "Oyam",
+                    "Pader",
+                    "Pakwach",
+                    "Pallisa",
+                    "Rakai",
+                    "Rubanda",
+                    "Rubirizi",
+                    "Rukiga",
+                    "Rukungiri",
+                    "Rwampara",
+                    "Sembabule",
+                    "Serere",
+                    "Sheema",
+                    "Sironko",
+                    "Soroti",
+                    "Tororo",
+                    "Wakiso",
+                    "Yumbe"
+                  ]
                 }
               }
             }
@@ -2434,7 +2238,19 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/zambia_province"
+                  "type": "string",
+                  "enum": [
+                    "Central Province",
+                    "Copperbelt Province",
+                    "Eastern Province",
+                    "Luapula Province",
+                    "Lusaka Province (includes the capital city, Lusaka)",
+                    "Muchinga Province",
+                    "Northern Province",
+                    "North-Western Province",
+                    "Southern Province",
+                    "Western Province"
+                  ]
                 }
               }
             }
@@ -2450,12 +2266,24 @@
             "then": {
               "properties": {
                 "geo_loc_province": {
-                  "$ref": "#/definitions/geospatial/zimbabwe_province"
+                  "type": "string",
+                  "enum": [
+                    "Bulawayo",
+                    "Harare (Capital Territory)",
+                    "Manicaland",
+                    "Mashonaland Central",
+                    "Mashonaland East",
+                    "Mashonaland West",
+                    "Masvingo",
+                    "Matabeleland North",
+                    "Matabeleland South",
+                    "Midlands"
+                  ]
                 }
               }
             }
           }
-        ],  
+        ],
         "propertyNames": {
           "enum": [
             "sample_collected_by",
@@ -2468,7 +2296,7 @@
             "geo_loc_city",
             "organism",
             "isolate",
-            "fasta_header_name",  
+            "fasta_header_name",
             "purpose_of_sampling",
             "purpose_of_sampling_details",
             "anatomical_material",
@@ -2485,13 +2313,13 @@
       "host": {
         "type": "object",
         "required": [
-            "host_scientific_name",
-            "host_disease",
-            "host_age",
-            "host_age_null_reason",
-            "host_age_bin",
-            "host_age_unit",
-            "host_gender"
+          "host_scientific_name",
+          "host_disease",
+          "host_age",
+          "host_age_null_reason",
+          "host_age_bin",
+          "host_age_unit",
+          "host_gender"
         ],
         "properties": {
           "host_scientific_name": {
@@ -2516,17 +2344,17 @@
               "Missing",
               "Not Collected",
               "Not Provided",
-              "Restricted Access"              
+              "Restricted Access"
             ]
           },
           "host_disease": {
             "enum": [
-                "COVID-19",
-                "Not Applicable",
-                "Missing",
-                "Not Collected",
-                "Not Provided",
-                "Restricted Access"
+              "COVID-19",
+              "Not Applicable",
+              "Missing",
+              "Not Collected",
+              "Not Provided",
+              "Restricted Access"
             ]
           },
           "host_age": {
@@ -2623,7 +2451,7 @@
             "else": {
               "properties": {
                 "host_age_null_reason": {
-                  "const": null 
+                  "const": null
                 },
                 "host_age_bin": {
                   "enum": [
@@ -2645,7 +2473,7 @@
             "if": {
               "properties": {
                 "host_age_bin": {
-                  "const": "0 - 9" 
+                  "const": "0 - 9"
                 }
               }
             },
@@ -2670,7 +2498,7 @@
             "if": {
               "properties": {
                 "host_age_bin": {
-                  "const": "10 - 19" 
+                  "const": "10 - 19"
                 }
               }
             },
@@ -2695,7 +2523,7 @@
             "if": {
               "properties": {
                 "host_age_bin": {
-                  "const": "20 - 29" 
+                  "const": "20 - 29"
                 }
               }
             },
@@ -2720,7 +2548,7 @@
             "if": {
               "properties": {
                 "host_age_bin": {
-                  "const": "30 - 39" 
+                  "const": "30 - 39"
                 }
               }
             },
@@ -2745,7 +2573,7 @@
             "if": {
               "properties": {
                 "host_age_bin": {
-                  "const": "40 - 49" 
+                  "const": "40 - 49"
                 }
               }
             },
@@ -2770,7 +2598,7 @@
             "if": {
               "properties": {
                 "host_age_bin": {
-                  "const": "50 - 59" 
+                  "const": "50 - 59"
                 }
               }
             },
@@ -2795,7 +2623,7 @@
             "if": {
               "properties": {
                 "host_age_bin": {
-                  "const": "60 - 69" 
+                  "const": "60 - 69"
                 }
               }
             },
@@ -2820,7 +2648,7 @@
             "if": {
               "properties": {
                 "host_age_bin": {
-                  "const": "70 - 79" 
+                  "const": "70 - 79"
                 }
               }
             },
@@ -2845,7 +2673,7 @@
             "if": {
               "properties": {
                 "host_age_bin": {
-                  "const": "80 - 89" 
+                  "const": "80 - 89"
                 }
               }
             },
@@ -2870,7 +2698,7 @@
             "if": {
               "properties": {
                 "host_age_bin": {
-                  "const": "90+" 
+                  "const": "90+"
                 }
               }
             },
@@ -2908,9 +2736,9 @@
         ],
         "properties": {
           "purpose_of_sequencing": {
-            "type":"array",
-            "items":{
-              "type":"string",
+            "type": "array",
+            "items": {
+              "type": "string",
               "enum": [
                 "Baseline surveillance (random sampling)",
                 "Chronic (prolonged) infection surveillance",
@@ -3020,7 +2848,7 @@
                 "format": "date"
               },
               {
-                "type": "null" 
+                "type": "null"
               }
             ]
           },
@@ -3055,7 +2883,7 @@
             "type": [
               "string",
               "null"
-            ]       
+            ]
           },
           "consensus_sequence_software_version": {
             "type": [
@@ -3096,7 +2924,7 @@
                       "Not Collected",
                       "Not Provided",
                       "Restricted Access",
-                      null                      
+                      null
                     ]
                   }
                 ]
@@ -3119,35 +2947,35 @@
                       "Not Collected",
                       "Not Provided",
                       "Restricted Access",
-                      null                     
+                      null
                     ]
                   }
                 ]
               },
               "consensus_genome_length": {
                 "type": [
-                    "integer",
-                    "null"
+                  "integer",
+                  "null"
                 ]
               },
               "Ns_per_100kbp": {
                 "type": [
-                    "number",
-                    "null"
+                  "number",
+                  "null"
                 ]
               }
-            }              
+            }
           },
           "reference_genome_accession": {
             "type": [
-                "string",
-                "null"
+              "string",
+              "null"
             ]
           },
           "bioinformatics_protocol": {
             "type": [
-                "string",
-                "null"
+              "string",
+              "null"
             ]
           }
         },
@@ -3167,7 +2995,7 @@
         "type": "object",
         "required": [
           "gene_name",
-          "diagnostic_pcr_ct_value", 
+          "diagnostic_pcr_ct_value",
           "diagnostic_pcr_ct_value_null_reason"
         ],
         "properties": {
@@ -3210,7 +3038,7 @@
               "Missing",
               "Not Collected",
               "Not Provided",
-              "Restricted Access"  
+              "Restricted Access"
             ]
           },
           "diagnostic_pcr_ct_value": {
@@ -3258,7 +3086,7 @@
         "else": {
           "properties": {
             "diagnostic_pcr_ct_value_null_reason": {
-              "const": null 
+              "const": null
             }
           }
         },
@@ -3275,8 +3103,8 @@
         "properties": {
           "lineage_name": {
             "type": [
-                "string",
-                "null"
+              "string",
+              "null"
             ]
           },
           "lineage_analysis_software_name": {
@@ -3319,7 +3147,7 @@
               "Not Provided",
               "Restricted Access",
               null
-          ]
+            ]
           },
           "variant_evidence": {
             "enum": [
